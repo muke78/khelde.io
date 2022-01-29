@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/noticias.css">
+    <link rel="stylesheet" href="CSS/reloj.css">
+    <link rel="stylesheet" href="CSS/clima.css">
+    <link rel="stylesheet" href="CSS/Bordes_Tag.css">
+    <link rel="stylesheet" href="CSS/tabs.css">
+    <link rel="shortcut icon" href="IMG/logo3.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css">
+    <script src="JS/scrollreveal.js"></script>
+    <title>Noticias - Khelde</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="IMG/logo3.png"></a>
+            <div class="wrap">
+                <div class="widget">
+                    <div class="fecha">
+                        <p id="diaSemana" class="diaSemana"></p>
+                        <p id="dia" class="dia"></p>
+                        <p>de</p>
+                        <p id="mes" class="mes"></p>
+                        <p>del</p>
+                        <p id="year" class="year"></p>
+                    </div>
+                    <div class="reloj">
+                        <p id="horas" class="horas"></p>
+                        <p>:</p>
+                        <p id="minutos" class="minutos"></p>
+                        <p>:</p>
+                        <div class="caja-segundos">
+                            <p id="ampm" class="ampm"></p>
+                            <p id="segundos" class="segundos"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="uil uil-times close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="Noticias.html">NOTICIAS</a></li>
+                    <li><a href="Acerca_de.html">ACERCA DE</a></li>
+                    <li><a href="personal.html">CONTACTAME</a></li>
+                </ul>
+            </div>
+            <i class="uil uil-bars menu" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>Khelde<img src="IMG/logo3.png" alt=""></h1>
+        <div class="bus-col">
+            <form action="PHP/form-send.php" method="post">
+                <input type="text" name="name" placeholder="Estamos a tus ordenes" required>
+                <button type="submit" class="hero-btn">Buscar</button>
+            </form>
+        </div>
+        <br>
+        <br>
+        <div id="contenedor">
+            <div id="caja1">
+                <h1 id="temperatura-valor"></h1>
+                <br>
+                <h1 id="temperatura-descripcion"></h1>
+            </div>
+            <div id="caja2">
+                <h2 id="ubicacion"></h2>
+                <img id="icono-animado" src="" alt="" height="128" width="128">
+            </div>
+            <div id="caja3">
+                <h1>Velocidad del viento</h3>
+                    <br>
+                    <h1 id="viento-velocidad"></h1>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------Course---------------------->
+    <section class="course" id="course">
+        <div class="wrap">
+            <ul class="tabs">
+                <li><a href="#tab1"><span><i class="uil uil-laptop"></i></span><span
+                            class="tab-text">Tecnologia</span></a></li>
+                <li><a href="#tab2"><span><i class="uil uil-palette"></i></span><span class="tab-text">Arte</span></a>
+                </li>
+                <li><a href="#tab3"><span><i class="uil uil-palette"></i></span><span
+                            class="tab-text">Deporte</span></a></li>
+            </ul>
+
+            <div class="secciones">
+                <article id="tab1">
+                    <h1>Tecnologia</h1>
+                    <div class="row">
+                        <div class="box">
+                            <h2>Inteligencia Artificial</h2>
+                            <p>En un intento de alcanzar el metaverso, la compañía matriz de Facebook, Whatsapp e
+                                Instagram, Meta, ha decidido presentar su ‘AI Research SuperCluster’ (RSC por sus siglas
+                                en ingles), una supercomputadora de Inteligencia Artificial que según ellos, se
+                                encuentra dentro de las más rápidas del mundo a día de hoy.
+
+                                Así lo dio a conocer Meta a Infobae, explicando que el objetivo de dicho proyecto es
+                                ayudar en las investigaciones de IA para construir mejores modelos de aprendizaje que
+                                permitan trabajar en la traducción de cientos de idiomas, analizar textos
+                                eficientemente, procesar imágenes, texto y video al mismo tiempo, así como desarrollar
+                                mejores herramientas de realidad aumentada de cara a la creación del metaverso, entre
+                                otras cosas.</p>
+                        </div>
+                        <div class="box">
+                            <h2>Machine Learning</h2>
+                            <p>La búsqueda de patrones en los datos, su detección y reacción en consecuencia, sin estar
+                                explícitamente programado para que esto ocurra, es la base del aprendizaje automático,
+                                cada vez más presente en el mundo de la creación de vídeos. Si ya hablábamos de cómo
+                                plataformas como Netflix permiten que sus usuarios se beneficien de los algoritmos a
+                                partir de tu historial de búsqueda, YouTube no se queda atrás, consciente de todo lo que
+                                puede lograr gracias a esta tecnología.A mediados del año 2016, la compañía anunciaba en
+                                su blog el lanzamiento de un nuevo diseño móvil de su pantalla inicial en las
+                                aplicaciones de iPhone y Android, algo que podía parecer un cambio menor pero que intr.
+                                oducía el uso del machine learning para revolucionar el mundo de la creación de vídeos.
+                            </p>
+                        </div>
+                        <div class="box">
+                            <h2>Programacion</h2>
+                            <p>Uno de los mercados más rentables para los programadores es el de las aplicaciones
+                                móviles. Ya sea trabajando en empresas especializadas o como autónomos, aprender sobre
+                                lenguajes de programación para apps puede abrir muchas puertas. Se prevé que el mercado
+                                global de plataformas de desarrollo de aplicaciones móviles, estimado en 9,1 billones de
+                                dólares en 2020, alcanzará un tamaño de 44,3 billones en 2027, con un crecimiento de un
+                                25,4% durante el período 2020-2027.En el desarrollo de aplicaciones móviles se pueden
+                                utilizar lenguajes de programación nativos, recurrir a lenguajes web, utilizar programas
+                                que no implican el manejo del código, e incluso motores 3D (como Unity). Todo depende
+                                del tipo de aplicación que vayamos a crear y a quién se dirija.</p>
+                        </div>
+                        <div class="box">
+                            <h2>Java</h2>
+                            <p>Por un lado, al hablar de Java, nos referimos a uno de los lenguajes de programación más
+                                utilizados desde hace años y que forma parte de multitud de aplicaciones. Al mismo
+                                tiempo nos referimos a un componente que funciona en segundo plano en la mayoría de los
+                                equipos con Windows por algunas razones de interés de las que os hablaremos a
+                                continuación. Cierto es que su uso ha descendido a lo largo de los últimos años para dar
+                                paso a otros estándares más actuales.Sin embargo, Java sigue teniendo una importancia
+                                bastante influyente en multitud de
+                                plataformas y soluciones software. Precisamente esta es la razón por la que este
+                                elemento se encuentra en la mayoría de los equipos. Y no solo en los ordenadores que
+                                tenemos en casa, sino que Java es un componente software habitual en multitud de
+                                servidores o en dispositivos móviles.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box">
+                            <h2>Cisco</h2>
+                            <p>Por un lado, al hablar de Java, nos referimos a uno de los lenguajes de programación más
+                                utilizados desde hace años y que forma parte de multitud de aplicaciones. Al mismo
+                                tiempo nos referimos a un componente que funciona en segundo plano en la mayoría de los
+                                equipos con Windows por algunas razones de interés de las que os hablaremos a
+                                continuación. Cierto es que su uso ha descendido a lo largo de los últimos años para dar
+                                paso a otros estándares más actuales.
+
+                                Sin embargo, Java sigue teniendo una importancia bastante influyente en multitud de
+                                plataformas y soluciones software. Precisamente esta es la razón por la que este
+                                elemento se encuentra en la mayoría de los equipos. Y no solo en los ordenadores que
+                                tenemos en casa, sino que Java es un componente software habitual en multitud de
+                                servidores o en dispositivos móviles.</p>
+                        </div>
+                        <div class="box">
+                            <h2>HTMl</h2>
+                            <p>Este nuevo estándar no tiene una cantidad asombrosa de novedades, pero las que tiene son
+                                absolutamente revolucionarias. La más destacada es la posibilidad de añadir archivos
+                                multimedia a la web, como vídeos o audios, y que estos no tengas que insertarlos
+                                utilizando otros plug-ins. Todo está incluido dentro del código.
+
+                                También se han añadido etiquetas que permiten crear animaciones en 2D, con una etiqueta
+                                de canvas y una API que permiten que puedas dibujar elementos en dos dimensiones y
+                                animarlos en la web. También se pueden añadir eventos para el teclado, ratón o mandos,
+                                que permiten poder utilizarlos para interactuar con una página.</p>
+                        </div>
+                        <div class="box">
+                            <h2>Arduino</h2>
+                            <p>Con la creciente demanda de profesionistas en el sector tecnológico, algunas
+                                organizaciones y empresas alrededor del mundo se han puesto en la tarea de crear
+                                programas y formaciones que, por una parte, despierte el interés en cursar estas
+                                carreras. Mientras que otras le apuestan a reforzar los conocimientos dentro del aula de
+                                los alumnos. Como es es caso de Arduino.
+
+                                Este es el caso de Ardiono Education, que en asociación con Technobel en Bélgica, han
+                                unido fuerzas para lanzar por vez primera el programa Inspiration Lab.</p>
+                        </div>
+                        <div class="box">
+                            <h2>Intel</h2>
+                            <p>El fabricante de chips Intel registró ingresos récord en el cuarto trimestre del año
+                                pasado, pero pronosticó ganancias del primer trimestre de este año por debajo de las
+                                expectativas de Wall Street, ya que enfrenta desafíos relacionados con problemas
+                                persistentes en la cadena de suministro global.
+
+                                Sin embargo, el presidente ejecutivo, Patrick Gelsinger, dijo en una conferencia
+                                telefónica que esperaba que esas restricciones persistieran este año y el próximo a
+                                medida que continuara la "demanda sin precedentes" de chips.</p>
+                        </div>
+                    </div>
+
+                </article>
+                <article id="tab2">
+                    <h1>Arte</h1>
+                    <div class="row">
+                        <div class="box">
+                            <h2>Diego Verdaguer inspiró la canción "Él me mintió"</h2>
+                            <p>Una de las canciones más apasionadas y fuertes que ha interpretado Amanda Miguel es "Él
+                                me mintió", de la cual ha dejado entrever, fue inspiración Diego Verdaguer en alguna
+                                etapa de su matrimonio, el cual acababa de cumplir 46 años.
+                                En un video realizado el 30 de marzo de 2021, Amanda respondió algunas preguntas de sus
+                                seguidores de Instagram, entre ellas estaba ¿a quién le escribiste Él me mintió?, ella
+                                respondió con tranquilidad: "A todas las mujeres que nos han mentido, incluyéndome".</p>
+                        </div>
+                        <div class="box">
+                            <h2>Bellas Artes expone arte popular fuera del canon y el folclor</h2>
+                            <p>A partir de este jueves, las salas Nacional, Diego Rivera, Paul Westheim y Justino
+                                Fernández del Palacio de Bellas Artes son ocupadas por más de 500 obras maestras del
+                                arte popular mexicano que son producto de la creación individual y colectiva de 45
+                                pueblos originarios de México en la exposición Arte de los pueblos de México.
+                                Disrupciones indígenas.</p>
+                        </div>
+                        <div class="box">
+                            <h2>Un pedacito de Picasso en NFT: las galerías de arte están atomizando sus obras para
+                                llegar a más inversores</h2>
+                            <p>La Galería Belvedere ha anunciado esta semana que va a convertir una de las obras más
+                                famosas de su colección, ‘El beso’ de Gustav Klimt, en 10.000 NFT que podrá a la venta
+                                en 9 de febrero por un precio de 1.850 euros la unidad, según han explicado en una nota.
+                                Con este “troceo” digital de su icónico cuadro, el museo de arte vienés planea conseguir
+                                alrededor de 18, 5 millones de euros.</p>
+                        </div>
+                        <div class="box">
+                            <h2>Arte que no se toca: la revolución de los NFT</h2>
+                            <p>La revolución y los cambios asociados a las criptomonedas se han trasladado al mundo del
+                                arte con los llamados NFT (Non-Fungible Tokens) que plantean nuevos escenarios en los
+                                que objetos intangibles, que pueden verse pero no tocarse, alcanzan valoraciones que en
+                                algunos casos superan a las del arte tradicional.
+
+                                Este es el caso de la experiencia que está llevando a cabo la Galería Belvedere de
+                                Viena, con la creación de una copia en alta resolución de “El Beso” de Gustav Klimt y su
+                                división en un puzzle de 10,000 cuadrículas únicas que se van a poner a la venta por
+                                separado, a un precio de 2,087 dólares cada una.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="box">
+                            <h2>#Soy | Gabriel Sánchez Viveros experimenta el arte sin etiquetas</h2>
+                            <p>Los NFT (Non-Fungible Tokens) se pueden entender como certificados digitales que
+                                garantizan la propiedad sobre gráficos, vídeos, textos o cualquier otro objeto digital.
+
+                                Al igual que las criptomonedas, se basan en una tecnología llamada “blockchain” (cadena
+                                de bloques), un proceso descentralizado que consiste en realizar una transacción a
+                                través de la red mediante bloques que contienen una “huella” inviolable con los datos de
+                                la transacción.</p>
+                        </div>
+                        <div class="box">
+                            <h2>¿Te gusta el arte? Mira esta exposición de Alfaro Siqueiros</h2>
+                            <p>En el marco del 53 aniversario de la creación de la Sala de Arte Público Siqueiros
+                                (SAPS), el sábado 29 de enero a las 10:00 horas, se transmitirá un video sobre la
+                                exposición inaugural organizada por David Alfaro Siqueiros; checa aquí cómo puedes
+                                verla.
+
+
+                                Lo anterior como parte de las celebraciones organizadas por la Secretaría de Cultura
+                                federal y el Instituto Nacional de Bellas Artes y Literatura (Inbal), invitaron a
+                                disfrutar este sábado del video que documenta la exposición inaugural realizada por
+                                Alfaro Siqueiros el 29 de enero de 1969.
+
+                                El material audiovisual del CIDS se podrá apreciar el sábado 29 de enero a las 10:00
+                                horas por la plataforma contigoenladistancia.cultura.gob.mx, así como por Facebook del
+                                Instituto (INBAmx) y de la SAPS (saladeartepublicosiqueiros) y Twitter: (@SAPSiqueiros).
+                            </p>
+                        </div>
+                        <div class="box">
+                            <h2>Trece nuevos museos para una escapada con mucho arte en 2022</h2>
+                            <p>Inaugurado el pasado 30 de junio en Odense, la ciudad natal de Hans Christian Andersen en
+                                la isla de Fionia (Dinamarca), dedica sus 5.600 metros cuadrados a la vida y obra del
+                                autor. Proyectado por el arquitecto Kengo Kuma (cuya firma está detrás del nuevo estadio
+                                olímpico de Tokio) en colaboración con 12 artistas internacionales, invita a vivir una
+                                experiencia sensorial del universo onírico creado por Andersen a través de sus salas con
+                                instalaciones inmersivas, primeras ediciones de sus libros y objetos personales. Además,
+                                se puede escuchar a algunos de sus personajes más ilustres, como la Sirenita y el Patito
+                                Feo. “Es un mundo de cuentos, puede pasar cualquier cosa, y nada es lo que parece”,
+                                asegura el director creativo del museo, Henrik Lübker.</p>
+                        </div>
+                        <div class="box">
+                            <h2>Dior se inspira en el arte y la formalidad masculina en su nueva colección</h2>
+                            <p>Para la colección Invierno 2021-2022 de la maison Dior, el director artístico Kim Jones
+                                se inspira en la extravagancia masculina de los atuendos formales; un vínculo con el
+                                pasado, que sigue vivo al día de hoy.
+
+                                Al igual que la alta costura, conecta el ahora con el ayer y sirve de ventana hacia la
+                                historia y la tradición. La tradición y el estilo contemporáneo se unen en esta
+                                colección, que supone el inicio de una colaboración con el artista escocés Peter Doig,
+                                residente en Trinidad y Tobago.</p>
+                        </div>
+                    </div>
+                </article>
+                <article id="tab3">
+                    <h1>Deporte</h1>
+                    <div class="row">
+                        <div class="box">
+                            <h2>Oficial: Getafe termina contrato con José Juan Macías</h2>
+                            <p>La primera aventura europea del mexicano José Juan Macías con el Getafe llegó a su fin.
+                                Fuentes cercanas informaron a Azteca Deportes que este viernes, el club español y Chivas
+                                firmaron un acuerdo para terminar de forma anticipada el préstamo con opción a compra
+                                que tenían vigente hasta el final de temporada.
+
+                                El acuerdo que ofreció Getafe fue pagar el préstamo completo al Guadalajara como
+                                compensación por no quedarse con Macías por el tiempo pactado, hecho que fue aceptado
+                                por la directiva del Rebaño Sagrado.</p>
+                        </div>
+                        <div class="box">
+                            <h2>¿Quiso copiar el estilo de Martinoli? Critican a Oswaldo Sánchez tras el Jamaica vs
+                                México</h2>
+                            <p>Este jueves, la selección mexicana disputó su primer encuentro del 2022 visitando a
+                                Jamaica en el marco de las eliminatorias mundialistas rumbo a Qatar 2022, donde
+                                consiguió un sufrido triunfo por 2-1 con goles de Henry Martín y Alexis Vega. Sin
+                                embargo, las críticas no se dirigieron solamente al combinado azteca y el cuerpo
+                                técnico, también hubo muchas hacia la transmisión y comentaristas de TUDN, quienes
+                                llevaron el partido de manera exclusiva. Uno de los personajes más criticados fue el ex
+                                guardameta de la selección nacional, Oswaldo Sánchez, quien incluso fue señalado de
+                                intentar imitar el estilo de Christian Martinoli, narrador de TV Azteca.
+
+                            </p>
+                        </div>
+                        <div class="box">
+                            <h2>SELECCIÓN MEXICANA: CON 17 DE 42 PUNTOS, ¿QUÉ POSIBILIDAD TIENE EL TRI DE ESTAR EN QATAR
+                                2022?
+                            </h2>
+                            <p>La Selección Mexicana venció a la Selección de Jamaica y consiguió tres puntos valiosos
+                                en la búsqueda de un boleto al Mundial de Qatar 2022.
+
+                                Con esta victoria México se coloca en el tercer lugar del Octagonal Final con 17 puntos,
+                                por encima de Panamá (selección que todavía no juega); Estados Unidos es segundo lugar
+                                con 18 y Canadá primero con 19.
+
+                                En la Concacaf el sumar más de 20 unidades permitía mantenerse como líder de la tabla y
+                                por ende ganar un boleto al Mundial, lo que significaba un 71 por ciento de los puntos
+                                totales que se disputaban. Para ser segundo bastaba con tener entre 16 y 19 unidades (62
+                                por ciento) y para quedar en el tercer lugar con 13 puntos era más que suficiente (50
+                                por ciento).</p>
+                        </div>
+                        <div class="box">
+                            <h2>Daniil Medvedev protagoniza discusión con el juez de silla y lo llama "tonto"</h2>
+                            <p>Daniil Medvedev logró avanzar a la final del Abierto de Australia tras imponerse en tres
+                                set al griego Stefanos Tsitsipas por 7-6(5), 4-6, 6-4 y 6-1 en 2 horas y 33 minutos, sin
+                                embargo, durante la semifinal se encaró con el juez de silla, ya que acusaba al papá de
+                                su rival de estar haciendo coaching con su hijo.
+                                Este viernes Medvedev dominó a Tsitsipas en un partido tenso y no exento de polémica.
+                                Hasta el punto de que el tenista ruso arremetió verbalmente contra el árbitro en un
+                                cambio de lado.
+
+                                Con un 5-4 para el griego, que iba a servir para igualar a un set, Medvedev recibió una
+                                amonestación por sus palabras.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="box">
+                            <h2>La Juventus se hace con Dusan Vlahovic</h2>
+                            <p>Parece que la rivalidad entre Fiorentina y Juventus parece abocada al infinito. Tras el
+                                histórico fichaje de Roberto Baggio, que encendió la llama del odio viola hacia la
+                                Vecchia Signora, los turineses han seguido haciéndose con futbolistas de la Fiore, desde
+                                promesas hasta jugadores ya consagrados en el estrellato.
+
+                                En los últimos años la Juventus se ha hecho con futbolistas de la talla de Giorgio
+                                Chiellini, Felipe Melo, Neto o los últimos y más dolorosos Federico Bernardeschi y
+                                Federico Chiesa, estrellas de la cantera viola. Ahora, Dusan Vlahovic cierra esta
+                                magnífica lista de futbolistas que han viajado de Florencia hacia Turín.
+
+                                Operación de 75 M€</p>
+                        </div>
+                        <div class="box">
+                            <h2>Así marcha la eliminatoria de la Concacaf rumbo a Qatar 2022</h2>
+                            <p>Las selecciones de Canadá, Estados Unidos y México, dueñas de las tres plazas de acceso
+                                directo al Mundial de Qatar-2022 por la Concacaf, sumaron triunfos este jueves en el
+                                reinicio de las eliminatorias mientras Panamá, cuarta, tropezó ante su perseguidora
+                                Costa Rica.
+                                A falta de cinco jornadas para el cierre del octagonal, Canadá se mantiene como
+                                sorprendente líder del grupo, con 19 puntos, seguida de Estados Unidos (18) y México
+                                (17). Por detrás, Panamá (14) sigue en la cuarta plaza, que ofrece un repechaje ante una
+                                selección de Oceanía, pero con Costa Rica (12) pisándole ahora los talones. </p>
+                        </div>
+                        <div class="box">
+                            <h2>Chicharito Hernández, sincero: No es fácil escuchar que mis hijos no son míos</h2>
+                            <p>En una transmisión hecha en sus redes sociales, el Chicharito, atacante ex del Manchester
+                                United y Real Madrid señaló que no le es sencillo lidiar con los comentarios que recibe
+                                en redes sociales, donde es blanco de constantes señalamientos.
+
+                                Entre los 'trolleos' más comunes que recibe son de los que dudan de su paternidad de los
+                                hijos que tuvo con la británica Sarah Kohan, algo que cala en el orgullo del tapatío.
+
+                                Hernández Balcázar y Sarah Kohan son padres de dos pequeños, Noah y Nala, quienes, de
+                                acuerdo a la modelo, no reciben el mejor de los tratos del ariete ex de Chivas.
+
+                                "No era el mejor compañero que necesitaba ser, no era el mejor padre que quería ser. No
+                                era un gran amigo. No era el gran ser humano que quería ser", dijo Kohan hace unos
+                                meses.</p>
+                        </div>
+                        <div class="box">
+                            <h2>CRUZ AZUL: LUCAS PASSERINI RESCINDIÓ CONTRATO CON LA MÁQUINA</h2>
+                            <p>Luego de un paso intrascendente por Cruz Azul, el delantero argentino Lucas Passerini
+                                rescindió su contrato con La Máquina y viajará a Chile para firmar con su nuevo club.
+
+                                Se trata del Club Unión Deportes la Calera, equipo al que llegará como agente libre tras
+                                llegar a un acuerdo para romper el contrato que tenía hasta diciembre del 2022 con Cruz
+                                Azul. </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------Footer---------------------->
+    <section class="footer">
+        <h4>Acerca de </h4>
+        <p>Somos una empresa constituida por la universidad
+            <strong>Universidad Politecnica del Valle de Mexico <br></strong>
+            donde como primera parte fuimos un blog de noticias <br> universitarias
+            y luego nos formamos como empresa.
+        </p>
+        <div class="icons">
+            <i class="uil uil-facebook-f"></i>
+            <i class="uil uil-twitter"></i>
+            <i class="uil uil-instagram"></i>
+            <i class="uil uil-linkedin"></i>
+        </div>
+        <p>Version 1.2 <b>Proyecto Regulado</b></p>
+        <p>Made with <i class="uil uil-heart"></i> Muke</p>
+    </section>
+
+    <!----------------------Scroll Top---------------------->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-angle-up scrollup__icon"></i>
+    </a>
+</body>
+<script src="JS/main.js"></script>
+<script src="JS/reveal.js"></script>
+<script src="JS/Reloj.js"></script>
+<script src="JS/clima.js"></script>
+<script src="JS/tabs.js"></script>
+
+
+
+</html>

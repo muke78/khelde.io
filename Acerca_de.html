@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/about.css">
+    <link rel="shortcut icon" href="IMG/logo3.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css">
+    <script src="JS/scrollreveal.js"></script>
+    <title>Acerca de - Khelde</title>
+
+</head>
+
+<body>
+
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="IMG/logo3.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="uil uil-times close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="Noticias.html">NOTICIAS</a></li>
+                    <li><a href="Acerca_de.html">ACERCA DE</a></li>
+                    <li><a href="personal.html">CONTACTAME</a></li>
+                </ul>
+            </div>
+            <i class="uil uil-bars menu" onclick="showMenu()"></i>
+        </nav>
+        <div class="title-header">
+            <h1>Acerca de nosotros</h1>
+        </div>
+    </section>
+    <!----------------------About us content---------------------->
+
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>Somos una universidad y tenemos mucho que contarte</h1>
+                <p>Es un proyecto de la materia de Aplicaciones y tecnologias
+                    de internet, dado un tema de tecnologia a la pagina web y
+                    adaptacion de una <b>API</b> y posteriormente subirla a
+                    un servdor de internet para su vista desde otros navegadores.
+                    <br>
+                    Esta materia me la imparte el profesor
+                    <br>
+                    <br>
+                    <b><em>Cruz Gomez Luis Manuel</em></b>
+                </p>
+                <a href="" class="hero-btn">Explora mas</a>
+            </div>
+            <div class="about-col">
+                <img src="IMG/5e849a985fa92CIDUniPoliValleM_2.jpg">
+            </div>
+        </div>
+    </section>
+    <!----------------------Contact Us---------------------->
+    <section class="location">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4398.591593906401!2d-99.12804008477255!3d19.64268353901842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f43e59c00a9f%3A0xe3c992b6aa422e2c!2sUniversidad%20Polit%C3%A9cnica%20del%20Valle%20de%20M%C3%A9xico!5e1!3m2!1ses-419!2smx!4v1642905522536!5m2!1ses-419!2smx"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <section class="contact-us">
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="uil uil-home"></i>
+                    <span>
+                        <h5>Av Mexiquense s/n, esq, Av. Universidad Politécnica.</h5>
+                        <p> Villa Esmeralda, 54910</p>
+                    </span>
+                </div>
+
+                <div>
+                    <i class="uil uil-phone"></i>
+                    <span>
+                        <h5>+525550626460</h5>
+                        <p>Lunes a Sabado de 9am a 9pm</p>
+                    </span>
+                </div>
+
+                <div>
+                    <i class="uil uil-envelope"></i>
+                    <span>
+                        <h5>informes@upvm.edu.mx</h5>
+                        <p>Mandanos tus dudas</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contact-col">
+                <form action="PHP/form-send.php" method="post">
+                    <input type="text" name="name" placeholder="Coloca tu nombre" required>
+                    <input type="email" name="email" placeholder="Coloca tu correo" required>
+                    <input type="text" name="subject" placeholder="Coloca el asunto" required>
+                    <textarea rows="8" name="message" placeholder="Mensaje" required></textarea>
+                    <button type="submit" class="hero-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!----------------------Footer---------------------->
+    <section class="footer">
+        <h4>Acerca de </h4>
+        <p>Somos una empresa constituida por la universidad
+            <strong>Universidad Politecnica del Valle de Mexico <br></strong>
+            donde como primera parte fuimos un blog de noticias <br> universitarias
+            y luego nos formamos como empresa.
+        </p>
+        <div class="icons">
+            <i class="uil uil-facebook-f"></i>
+            <i class="uil uil-twitter"></i>
+            <i class="uil uil-instagram"></i>
+            <i class="uil uil-linkedin"></i>
+        </div>
+        <p>Version 1.2 <b>Proyecto Regulado</b></p>
+        <p>Made with <i class="uil uil-heart"></i> Muke</p>
+    </section>
+
+    <!----------------------Scroll Top---------------------->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-angle-up scrollup__icon"></i>
+    </a>
+</body>
+<script src="JS/main.js"></script>
+<script src="JS/reveal.js"></script>
+
+
+</html>
