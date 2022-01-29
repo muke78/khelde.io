@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*******************Header*********************/
+
+.sub-header {
+    height: auto;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.9), rgba(4, 9, 30, 0.1)), url(../IMG/giphy.gif);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.sub-header h1 {
+    font-size: 70px;
+}
+
+.sub-header h1>img {
+    margin-left: 40px;
+    width: 80px;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 70px;
+}
+
+body {
+    background: #181818;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #f44336;
+    padding: 12px 34px;
+    font-size: 20px;
+    background: #f44336;
+    position: relative;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+.hero-btn:hover {
+    border: 1px solid #fff;
+    background: #bd2b21;
+    transition: 0.4s;
+}
+
+nav .close, nav .menu {
+    display: none;
+}
+
+.course {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.course h1 {
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 70px;
+}
+
+.course p {
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
+    width: 100%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-col {
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 0.5rem;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    transition: 0.5s;
+}
+
+.course-col h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.course-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.bus-col {
+    margin-top: 20px;
+}
+
+.bus-col input {
+    font-size: 22px;
+    padding: 25px 20px;
+    border: none;
+    outline: none;
+    min-width: 50%;
+    height: 30px;
+    border-radius: 30px;
+}
+
+/*******************Facilities*********************/
+
+.facilities2 {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.facilities2 h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.facilities2 p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.facilities-col {
+    flex-basis: 31%;
+    border-radius: 0.5rem;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.facilities-col img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.facilities-col p {
+    padding: 0;
+}
+
+.facilities-col h3 {
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/*******************Footer*********************/
+
+.footer {
+    background: #e03427;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4 {
+    color: #fff;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.footer p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.icons .uil {
+    color: #fff;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    font-size: 25px;
+}
+
+.uil-heart {
+    color: #fff;
+}
+
+/*******************Scroll Top*********************/
+
+.scrollup {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-color: #e03427;
+    opacity: .8;
+    padding: .20rem .5rem;
+    border-radius: .4rem;
+    z-index: 10;
+    transition: .4s;
+}
+
+.scrollup:hover {
+    background-color: #f44336;
+}
+
+.scrollup__icon {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+/* Show scroll */
+
+.show-scroll {
+    bottom: 5rem;
+}
+
+@media (max-width:700px) {
+    .text-box h1 {
+        font-size: 40px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: fixed;
+        background: #e03427;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .menu, nav .close {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        padding: 20px;
+    }
+    
+    .text-box h1 {
+        font-size: 40px;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: #e03427;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .menu, nav .close {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+}
+
+body::-webkit-scrollbar {
+    width: 9px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #907d7d;
+    border-radius: 3px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #bec0c0;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #636e72;
+}

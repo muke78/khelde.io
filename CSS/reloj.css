@@ -1,0 +1,53 @@
+* {
+	margin:0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wrap {
+	
+	width: 40%;
+	max-width: 1000px;
+	/*margin:auto;*/
+}
+
+.widget {
+	width: 100%;
+	/* margin: 2em; */
+	/*margin:32px; */
+}
+
+.widget p {
+	display: inline-block;
+	line-height: 1em;
+}
+
+.fecha {
+	font-family: Oswald, Arial;
+	text-align: center;
+	font-size:18px;
+	margin-bottom: 0.3125rem;
+	/*margin-bottom: 5px;*/
+	
+	width: 100%;
+}
+
+.reloj {
+	font-family: Oswald, Arial;
+	width: 100%;
+	font-size: 35px;
+	text-align: center;
+
+}
+
+.reloj .caja-segundos {
+	display: inline-block;
+}
+
+.reloj .segundos,
+.reloj .ampm {
+	font-size: 2rem;
+	display: block;
+}

@@ -1,0 +1,136 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+.wrap {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 95px;
+}
+
+ul.tabs {
+	width: 100%;
+	background: #363636;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	justify-content: space-around;
+}
+
+ul.tabs li {
+	width: 100%;
+}
+
+ul.tabs li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	text-align: center;
+	display: block;
+	padding: 20px 0px;
+}
+
+.active {
+	border-radius: 0.2rem;
+	background: #E03426;
+}
+
+ul.tabs li a .tab-text {
+	margin-left: 8px;
+}
+
+.secciones {
+	width: 100%;
+	background: #fff;
+}
+
+.secciones article {
+	padding: 30px;
+}
+
+.secciones article p {
+	text-align: justify;
+}
+
+#tab1 {
+	color: #fff;
+	background: rgb(37, 216, 221);
+	background: linear-gradient(86deg, rgba(37, 216, 221, 1) 0%, rgba(66, 82, 162, 1) 49%, rgba(202, 45, 253, 1) 100%);
+	animation: color 5s ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+#tab2 {
+	color: #fff;
+	background: rgb(255, 133, 18);
+	background: linear-gradient(90deg, rgba(255, 133, 18, 1) 0%, rgba(66, 190, 172, 1) 51%, rgba(69, 241, 230, 1) 100%);
+	animation: color 5s ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+#tab3 {
+	color: #fff;
+	background: rgb(38, 77, 78);
+	background: linear-gradient(56deg, rgba(38, 77, 78, 1) 0%, rgba(43, 153, 90, 1) 50%, rgba(49, 253, 45, 1) 100%);
+	animation: color 5s ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+@keyframes color {
+	5% {
+		filter: hue-rotate(20deg);
+	}
+
+	25% {
+		filter: hue-rotate(40deg);
+	}
+
+	35% {
+		filter: hue-rotate(80deg);
+	}
+
+	50% {
+		filter: hue-rotate(120deg);
+	}
+
+	75% {
+		filter: hue-rotate(180deg);
+	}
+
+	90% {
+		filter: hue-rotate(240deg);
+	}
+
+	100% {
+		filter: hue-rotate(300deg);
+	}
+}
+
+@media screen and (max-width: 700px) {
+	ul.tabs li {
+		width: none;
+		flex-basis: 0;
+		flex-grow: 1;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	ul.tabs li a {
+		padding: 15px 0px;
+	}
+
+	ul.tabs li a .tab-text {
+		display: none;
+	}
+
+	.secciones article {
+		padding: 20px;
+	}
+}

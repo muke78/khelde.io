@@ -1,0 +1,75 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#contenedor {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: inline-block;
+    margin-bottom: 3.5%;
+
+}
+
+#caja1, #caja2, #caja3 {
+    display: inline-block;
+    margin: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 0.5rem;
+    padding: 40px;
+    width: 350px;
+    height: 250px;
+
+
+}
+
+#caja1 {
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    color: azure;
+
+}
+
+#caja2 {
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    color: azure;
+
+}
+
+#caja3 {
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    color: azure;
+
+}
+
+
+#caja1 h1 {
+    font-size: 25px;
+
+}
+
+#caja2 h1 {
+    font-size: 25px;
+}
+
+#caja3 h1 {
+    font-size: 25px;
+}
+
+@media screen and (max-width:430px) {
+    #caja1, #caja2, #caja3 {
+        display: inline-block;
+        margin: 30px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 0.5rem;
+        padding: 40px;
+        width: 250px;
+        height: 250px;
+    }
+
+}
