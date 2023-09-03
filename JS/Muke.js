@@ -1,11 +1,12 @@
 var typed = new Typed(".auto-input", {
     strings: [
-        '<i class="nombre"> Muke</i>',
-        '<i class="nombre"> Desarrollador</i>',
-        '<i class="nombre"> Diseñador UI</i>'
+        '<i class="nombre"> MUKE</i>',
+        '<i class="nombre"> FRONT END & BACKEND</i>',
+        '<i class="nombre"> ANALISTA DE DATOS</i>'
+
     ],
     typeSpeed: 150,
-    backSpeed: 150,
+    backSpeed: 40,
     loop: true,
     showCursor: true,
     cursorChar: '<i class="cur">|</i>',
