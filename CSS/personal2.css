@@ -279,12 +279,12 @@ nav__toggle {
 /*==================== HOME ====================*/
 .cur {
     color: var(--first-color);
-    font-weight: 600;
+    font-weight: 500;
 
 }
 
 .nombre {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 500;
     color: var(--first-color);
     text-transform: uppercase;
@@ -329,8 +329,9 @@ nav__toggle {
 }
 
 .home__title {
-
-    font-size: 60px;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .home__subtitle {
