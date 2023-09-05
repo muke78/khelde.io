@@ -330,7 +330,6 @@ nav__toggle {
 
 .home__title {
     font-size: 40px;
-    text-transform: uppercase;
     letter-spacing: 2px;
 }
 
@@ -479,6 +478,7 @@ nav__toggle {
 
 .skills__icon,
 .skills__arrow {
+    width: 32px;
     font-size: 2rem;
     color: var(--first-color);
 }
