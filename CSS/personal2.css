@@ -548,6 +548,10 @@ nav__toggle {
     width: 50%;
 }
 
+.skills__java {
+    width: 55%;
+}
+
 .skills__react {
     width: 30%;
 }
